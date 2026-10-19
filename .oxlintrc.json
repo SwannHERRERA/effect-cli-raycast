@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc", "import", "react", "vitest"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "env": { "node": true, "es2024": true },
+  "ignorePatterns": ["**/dist/**", "examples/acme-raycast/raycast-env.d.ts"],
+  "rules": {
+    // The React 17+ JSX transform needs no React import.
+    "react/react-in-jsx-scope": "off",
+    // `_tag` is Effect's discriminant for tagged unions, errors and Option/Exit.
+    "no-underscore-dangle": ["warn", { "allow": ["_tag"] }],
+    // Tagged-enum constructors (`AsyncState.Loading()`, `RunState.Idle(...)`) are capitalized by convention.
+    "react/capitalized-calls": "off",
+    // The code is immutable by design; spreading into new values inside `map` is intended.
+    "oxc/no-map-spread": "off"
+  }
+}

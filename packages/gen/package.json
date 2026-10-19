@@ -1,0 +1,27 @@
+{
+  "name": "@effect-cli-raycast/gen",
+  "version": "0.1.0",
+  "description": "`ecr` — generate and sync a Raycast extension from an Effect v4 CLI.",
+  "bin": {
+    "ecr": "./bin/ecr.js"
+  },
+  "type": "module",
+  "imports": {
+    "#src/*": "./src/*.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@effect-cli-raycast/core": "workspace:*",
+    "jiti": "^2.7.0"
+  },
+  "devDependencies": {
+    "@effect/platform-node": "^4.0.5",
+    "effect": "^4.0.5"
+  },
+  "peerDependencies": {
+    "@effect/platform-node": "^4.0.5",
+    "effect": "^4.0.5"
+  }
+}

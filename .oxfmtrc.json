@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": false,
+  "trailingComma": "none",
+  "arrowParens": "always",
+  "ignorePatterns": ["**/dist/**", "pnpm-lock.yaml", "examples/acme-raycast/raycast-env.d.ts"]
+}

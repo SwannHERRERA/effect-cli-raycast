@@ -1,0 +1,22 @@
+{
+  "name": "@effect-cli-raycast/core",
+  "version": "0.1.0",
+  "description": "Reflect an Effect v4 CLI into a serializable spec, build argv, and run it in-process or as a binary.",
+  "type": "module",
+  "imports": {
+    "#src/*": "./src/*.ts",
+    "#test/*": "./test/*.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./testing": "./test/fixture.ts"
+  },
+  "devDependencies": {
+    "@effect/platform-node": "^4.0.5",
+    "effect": "^4.0.5"
+  },
+  "peerDependencies": {
+    "@effect/platform-node": "^4.0.5",
+    "effect": "^4.0.5"
+  }
+}

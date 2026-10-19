@@ -1,0 +1,129 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "acme-raycast",
+  "description": "Acme platform CLI, generated from its Effect command tree",
+  "categories": [
+    "Developer Tools"
+  ],
+  "license": "MIT",
+  "author": "swann",
+  "scripts": {
+    "sync": "ecr sync",
+    "inspect": "ecr inspect",
+    "build": "ray build",
+    "dev": "ray develop",
+    "lint": "ray lint"
+  },
+  "dependencies": {
+    "@effect/platform-node": "^4.0.5",
+    "@raycast/api": "^2.8.2",
+    "acme-cli": "workspace:*",
+    "effect": "^4.0.5",
+    "effect-cli-raycast": "workspace:*"
+  },
+  "devDependencies": {
+    "@effect-cli-raycast/gen": "workspace:*",
+    "@types/node": "22.19.17",
+    "@types/react": "19.0.10",
+    "typescript": "^5.9.3"
+  },
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "browse",
+      "title": "Browse Acme",
+      "description": "Acme platform CLI",
+      "mode": "view"
+    },
+    {
+      "name": "greet",
+      "title": "Greet",
+      "subtitle": "Acme",
+      "description": "Say hello",
+      "mode": "view",
+      "keywords": [
+        "hello",
+        "hi"
+      ],
+      "arguments": [
+        {
+          "name": "name",
+          "type": "text",
+          "placeholder": "Name",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "deploy",
+      "title": "Deploy",
+      "subtitle": "Acme",
+      "description": "Deploy services to an environment",
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "env",
+          "type": "dropdown",
+          "placeholder": "Env",
+          "required": true,
+          "data": [
+            {
+              "title": "dev",
+              "value": "dev"
+            },
+            {
+              "title": "staging",
+              "value": "staging"
+            },
+            {
+              "title": "prod",
+              "value": "prod"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "logs",
+      "title": "Tail Logs",
+      "subtitle": "Acme",
+      "description": "Show recent logs",
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "service",
+          "type": "text",
+          "placeholder": "Service",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "db-migrate",
+      "title": "Db Migrate",
+      "subtitle": "Acme",
+      "description": "Run pending migrations",
+      "mode": "view"
+    }
+  ],
+  "platforms": [
+    "macOS"
+  ],
+  "preferences": [
+    {
+      "name": "token",
+      "title": "Token",
+      "description": "API token",
+      "required": true,
+      "type": "password"
+    }
+  ],
+  "title": "Acme",
+  "tools": [
+    {
+      "name": "deploy",
+      "title": "Deploy",
+      "description": "Deploy services to an environment"
+    }
+  ]
+}

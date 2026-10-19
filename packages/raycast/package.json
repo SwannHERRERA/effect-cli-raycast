@@ -1,0 +1,28 @@
+{
+  "name": "effect-cli-raycast",
+  "version": "0.1.0",
+  "description": "Turn an Effect v4 CLI into a Raycast extension.",
+  "type": "module",
+  "imports": {
+    "#src/*": "./src/*.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./config": "./src/config.ts"
+  },
+  "dependencies": {
+    "@effect-cli-raycast/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@effect/platform-node": "^4.0.5",
+    "@raycast/api": "^2.8.2",
+    "@types/react": "19.0.10",
+    "effect": "^4.0.5",
+    "react": "19.0.0"
+  },
+  "peerDependencies": {
+    "@raycast/api": "^2.8.2",
+    "effect": "^4.0.5",
+    "react": "^19.0.0"
+  }
+}
